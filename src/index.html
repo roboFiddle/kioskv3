@@ -22,28 +22,24 @@
         },
         getAuthInstance: function() {
             return {
-                getAuthInstance: function() {
-                    return {
-                        isSignedIn: {
-                            get: function() {
-                                return true;
-                            }
-                        },
-                        currentUser: {
-                            get: function() {
+                isSignedIn: {
+                    get: function() {
+                        return true;
+                    }
+                },
+                currentUser: {
+                    get: function() {
+                        return {
+                            getAuthResponse: function() {
                                 return {
-                                    getAuthResponse: function() {
-                                        return {
-                                            id_token: 'THIS_IS_A_DUMMY_TOKEN'
-                                        }
-                                    }
+                                    id_token: 'THIS_IS_A_DUMMY_TOKEN'
                                 }
                             }
-                        },
-                        signOut: function() {
-                            return Promise.resolve();
                         }
                     }
+                },
+                signOut: function() {
+                    return Promise.resolve();
                 }
             }
         }
