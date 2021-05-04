@@ -15,7 +15,7 @@ from . import IN_MORNING_MODE
 import os
 
 os.chdir("/home/kiosk/kioskv3")
-import kioskserver.load_data
+#import kioskserver.load_data
 
 # idk if this is done right, just change it if it isn't
 def IndexWebApp(request):
