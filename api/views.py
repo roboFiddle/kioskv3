@@ -12,7 +12,10 @@ from django.forms.models import model_to_dict
 import csv
 import pytz as tz
 from . import IN_MORNING_MODE
+import os
 
+os.chdir("/home/kiosk/kioskv3")
+import kioskserver.load_data
 
 # idk if this is done right, just change it if it isn't
 def IndexWebApp(request):
